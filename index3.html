@@ -26,9 +26,50 @@
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://gdllive.com/" />
-    
+
 <style>
-.match-header {
+        :root {
+            --primary-color: #1e3c72;
+            --secondary-color: #2a5298;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --light-text: #777;
+            --bg-color: #f5f5f5;
+            --card-bg: #fff;
+            --border-color: #e1e1e1;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+        
+        /* Header Styles */
+        .main-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .match-header {
             background-color: var(--accent-color);
             color: white;
             padding: 12px;
@@ -36,8 +77,120 @@
             border-radius: 5px;
             margin-bottom: 15px;
             font-weight: bold;
-}
-/* Live Stream Player */
+        }
+        
+        /* Card Styles */
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        
+        /* Scoreboard Styles */
+        .scoreboard {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .score-main {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        .score-details {
+            text-align: right;
+        }
+        
+        .score-status {
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        
+        /* Player Stats */
+        .player-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .player-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .stat-card {
+            background-color: var(--card-bg);
+            padding: 12px;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .stat-header {
+            font-weight: bold;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+            margin-bottom: 8px;
+            color: var(--primary-color);
+        }
+        
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
+        
+        th {
+            background-color: #f1f1f1;
+            padding: 8px 10px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 8px 10px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .text-right {
+            text-align: right;
+        }
+        
+        /* Commentary */
+        .commentary-item {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .commentary-meta {
+            font-size: 0.8rem;
+            color: var(--light-text);
+            margin-top: 3px;
+        }
+        
+        .event {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 0 0 8px 8px;
+            font-size: 0.9rem;
+        }
+        
+        /* Live Stream Player */
         .player-container {
             margin-bottom: 20px;
             border-radius: 8px;
@@ -111,9 +264,10 @@
                 padding: 10px;
             }
         }
-  </style>
-
-
+    </style>
+</head>
+<body>
+    
 <!-- Live Stream Player -->
         <div class="card player-container">
             <div class="player-header">
