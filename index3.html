@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDL Live IPL - Watch Live Cricket Matches Online</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Watch Live IPL on GDL Live TV - Get real-time cricket scores, live commentary, and streaming of all IPL 2025 matches. Your ultimate destination for Indian Premier League coverage.">
+    <meta name="keywords" content="IPL, live cricket, cricket score, live streaming, IPL 2025, Indian Premier League, GDL Live, cricket match">
+    <meta name="author" content="GDL Live">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="GDL Live IPL - Watch Live Cricket Matches Online">
+    <meta property="og:description" content="Watch Live IPL on GDL Live TV - Get real-time cricket scores, live commentary, and streaming of all IPL 2025 matches.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="GDL Live IPL">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GDL Live IPL - Watch Live Cricket Matches Online">
+    <meta name="twitter:description" content="Watch Live IPL on GDL Live TV - Get real-time cricket scores, live commentary, and streaming of all IPL 2025 matches.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://gdllive.com/" />
+    
+<style>
+.match-header {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-weight: bold;
+}
+/* Live Stream Player */
+        .player-container {
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .player-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 10px 15px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .player-content {
+            background-color: #000;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            position: relative;
+        }
+        
+        .player-content iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Match Headline */
+        .match-headline {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 12px 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            font-size: 1.1rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .scoreboard {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .score-details {
+                text-align: left;
+                margin-top: 10px;
+            }
+            
+            .score-main {
+                font-size: 1.4rem;
+            }
+            
+            .player-container {
+                margin-left: -15px;
+                margin-right: -15px;
+                border-radius: 0;
+            }
+            
+            .match-headline {
+                font-size: 1rem;
+                padding: 10px;
+            }
+        }
+  </style>
+
+
+<!-- Live Stream Player -->
+        <div class="card player-container">
+            <div class="player-header">
+                <span>Live Stream</span>
+                <span id="stream-status">● LIVE</span>
+            </div>
+            <div class="player-content">
+                <iframe id="live-stream" src="https://embed.gdlcourses.cfd/op.html" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="match-header" id="match-title">
+            Loading match data...
+        </div>
+
+  </body>
+</html>
